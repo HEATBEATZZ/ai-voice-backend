@@ -3,7 +3,6 @@ flask-cors==4.0.0
 groq==0.4.2
 SpeechRecognition==3.10.1
 pydub==0.25.1
-pygame==2.5.2
 pyaudio==0.2.14
 gunicorn==21.2.0
 Werkzeug==3.0.1
