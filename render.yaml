@@ -9,7 +9,10 @@ services:
         libsdl2-mixer-dev \
         libsdl2-ttf-dev \
         portaudio19-dev \
-        python3-pyaudio
+        python3-pyaudio \
+        build-essential \
+        python3-dev
+      pip install --upgrade pip
       pip install -r requirements.txt
     startCommand: gunicorn ai_voice_backend:app
     envVars:
