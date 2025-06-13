@@ -12,8 +12,12 @@ services:
         portaudio19-dev \
         python3-pyaudio \
         build-essential \
-        python3-dev
-      pip install --no-cache-dir -r requirements.txt
+        python3-dev \
+        python3-pip \
+        python3-setuptools \
+        python3-wheel
+      python3 -m pip install --upgrade pip
+      pip install -r requirements.txt
     startCommand: gunicorn ai_voice_backend:app
     envVars:
       - key: PYTHON_VERSION
