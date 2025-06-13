@@ -3,7 +3,8 @@
 set -o errexit
 
 # Install system dependencies
-apt-get update && apt-get install -y \
+apt-get update
+apt-get install -y \
     libsdl2-dev \
     libsdl2-image-dev \
     libsdl2-mixer-dev \
@@ -11,10 +12,14 @@ apt-get update && apt-get install -y \
     portaudio19-dev \
     python3-pyaudio \
     build-essential \
-    python3-dev
+    python3-dev \
+    pkg-config
 
-# Upgrade pip
-pip install --upgrade pip
+# Upgrade pip and install build tools
+pip install --upgrade pip setuptools wheel
 
-# Install Python dependencies
+# Install pygame separately
+pip install pygame --pre -i https://pypi.org/simple/
+
+# Install other Python dependencies
 pip install -r requirements.txt 
