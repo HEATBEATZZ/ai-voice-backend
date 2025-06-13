@@ -12,7 +12,13 @@ apt-get install -y \
     portaudio19-dev \
     python3-pyaudio \
     build-essential \
-    python3-dev
+    python3-dev \
+    python3-pip \
+    python3-setuptools \
+    python3-wheel
 
-# Install Python dependencies with binary distributions
-pip install --no-cache-dir -r requirements.txt 
+# Upgrade pip
+python3 -m pip install --upgrade pip
+
+# Install Python dependencies
+pip install -r requirements.txt 
