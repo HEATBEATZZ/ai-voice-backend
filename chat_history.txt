@@ -1,0 +1,46 @@
+# AI Voice Assistant Chat History
+
+## Project Summary
+This project is an AI Voice Assistant that allows users to have conversations with an AI through speech. The application includes real-time speech-to-text, AI processing, and text-to-speech capabilities.
+
+## Implementation History
+
+### Initial Implementation
+- Created a web interface with microphone recording functionality
+- Implemented backend server with Flask for processing audio
+- Added AI response generation using Groq API
+- Implemented text-to-speech for AI responses
+
+### UI Simplification
+- Removed all buttons except the "Send" button to simplify the interface
+- Updated UI state management to work with the simplified controls
+
+### Microphone Permission Fix
+- Identified issue: Users experiencing "Could not access microphone" errors
+- Solution: Replaced direct microphone recording with Web Speech API
+- Modified frontend to use speech recognition without requiring microphone permissions
+- Added new backend endpoint `/process_text` to handle text input directly
+- Updated UI text and workflow to reflect the new approach
+
+## Current Features
+- Real-time speech recognition using Web Speech API
+- Text processing with AI (Groq API)
+- Text-to-speech for AI responses
+- Simplified UI with only a "Send" button
+- Support for both Hindi and English languages
+
+## How to Use
+1. Click the microphone to start listening
+2. Speak your message
+3. Click the microphone again to stop listening
+4. Click the "Send" button to send your transcribed text to the AI
+5. The AI will process your text and respond with both text and audio
+
+## Technical Notes
+- Backend: Python with Flask
+- Frontend: HTML, CSS, JavaScript
+- AI: Groq API with gemma2-9b-it model
+- TTS: A4F local TTS
+- Speech Recognition: Web Speech API
+
+This file was created to maintain a record of the development history and features of the AI Voice Assistant project.

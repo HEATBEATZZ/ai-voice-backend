@@ -1,0 +1,9 @@
+flask==2.3.3
+flask-cors==4.0.0
+groq==0.4.1
+a4f-local>=0.1.0
+SpeechRecognition==3.10.0
+pydub==0.25.1
+pygame>=2.5.2,<3.0.0
+pyaudio==0.2.13
+gunicorn==21.2.0
