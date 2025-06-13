@@ -12,14 +12,7 @@ apt-get install -y \
     portaudio19-dev \
     python3-pyaudio \
     build-essential \
-    python3-dev \
-    pkg-config
+    python3-dev
 
-# Upgrade pip and install build tools
-pip install --upgrade pip setuptools wheel
-
-# Install pygame separately
-pip install pygame --pre -i https://pypi.org/simple/
-
-# Install other Python dependencies
-pip install -r requirements.txt 
+# Install Python dependencies with binary distributions
+pip install --no-cache-dir -r requirements.txt 
